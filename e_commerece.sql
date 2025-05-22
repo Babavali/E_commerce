@@ -1,14 +1,3 @@
--- E-Commerce Platform Table
-DROP TABLE IF EXISTS `ecommerce_platforms`;
-CREATE TABLE `ecommerce_platforms` (
-    `id` SERIAL PRIMARY KEY,
-    `platform_instance_reference` VARCHAR(50) UNIQUE NOT NULL,
-    `merchant_reference` VARCHAR(50) NOT NULL,
-    `currency` VARCHAR(3) NOT NULL,
-    `platform_type` VARCHAR(20) NOT NULL CHECK (platform_type IN ('Retail', 'Marketplace', 'Subscription')),
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
 
 -- Products Table
 DROP TABLE IF EXISTS `products`;
