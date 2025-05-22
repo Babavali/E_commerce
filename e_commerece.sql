@@ -2,7 +2,6 @@
 -- Products Table
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
-    `id` SERIAL PRIMARY KEY,
     `productReference` VARCHAR(50) UNIQUE NOT NULL,
     `productName` VARCHAR(100) NOT NULL,
     `productDescription` TEXT,
@@ -17,7 +16,6 @@ CREATE TABLE `products` (
 -- Orders Table
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
-    `id` SERIAL PRIMARY KEY,
     `currency` VARCHAR(100) NOT NULL,
     `platformType` VARCHAR(50) UNIQUE NOT NULL,
     `orderReference` VARCHAR(50) UNIQUE NOT NULL,
